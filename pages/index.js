@@ -39,7 +39,6 @@ function Nav({ left }) {
   return (
     <A11y
       role='button'
-      description={`Spin ${left ? 'left' : 'right'}`}
       actionCall={() => {
         snap.setRotation(
           snap.rotation + ((Math.PI * 2) / geometries?.length) * (left ? -1 : 1)
@@ -118,7 +117,6 @@ function Carroussel() {
             <A11y
               key={item?.name}
               role='content'
-              description={`a ${item?.name}`}
               tabIndex={-1}
               hidden={active !== i}
               actionCall={() => {
@@ -166,10 +164,7 @@ export default function Home() {
           />
           <ambientLight intensity={0.8} />
           <group>
-            <A11ySection
-              label='Shape carousel'
-              description='This carousel contains 5 shapes. Use the Previous and Next buttons to cycle through all the shapes.'
-            >
+            <A11ySection>
               <Nav left />
               <Carroussel />
               <Nav />
