@@ -70,7 +70,7 @@ function Shape({ index, active, item, ...props }) {
 
   useFrame((state, delta) => {
     const s = active ? 1 : 0.75
-    ref.current.scale.lerp(vec.set(s, s, s), snap.motionDisabled ? 1 : 0.1)
+    ref.current.scale.lerp(vec.set(s, s, s), 0.1)
     ref.current.position.y = active ? Math.sin(state.clock.elapsedTime) / 2 : 0
     ref.current.rotation.y += active ? 0.005 : 0
   })
@@ -86,10 +86,9 @@ function Shape({ index, active, item, ...props }) {
 
 function Carroussel() {
   const viewport = useThree((state) => state.viewport)
-  const { rotation, motionDisabled, active } = useIslandStore(
+  const { rotation, active } = useIslandStore(
     (state) => ({
       rotation: state.rotation,
-      motionDisabled: state.motionDisabled,
       active: state.active,
     }),
     shallow
@@ -103,7 +102,7 @@ function Carroussel() {
       (group.current.rotation.y = THREE.MathUtils.lerp(
         group.current.rotation.y,
         rotation - Math.PI / 2,
-        motionDisabled ? 1 : 0.1
+        0.1
       ))
   )
   return (
