@@ -1,12 +1,10 @@
 import * as THREE from 'three'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import React, { Suspense, useEffect, useRef } from 'react'
-import { ContactShadows, useContextBridge } from '@react-three/drei'
+import React, { Suspense, useRef } from 'react'
+import { useContextBridge } from '@react-three/drei'
 import {
   A11y,
   useA11y,
-  A11yAnnouncer,
-  useUserPreferences,
   A11ySection,
   A11yUserPreferencesContext,
 } from '@react-three/a11y'
