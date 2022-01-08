@@ -11,7 +11,6 @@ import {
   A11yUserPreferencesContext,
 } from '@react-three/a11y'
 import { ResizeObserver } from '@juggle/resize-observer'
-import { Badge } from '@pmndrs/branding'
 import { useIslandStore } from '../src/store'
 import shallow from 'zustand/shallow'
 import { geometries, islands } from '../src/state'

@@ -1478,11 +1478,6 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
-"@pmndrs/branding@^0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@pmndrs/branding/-/branding-0.0.8.tgz#1ebdafdfe03fa2a394fc038313f083a9a4d15186"
-  integrity sha512-AIWJJDiUhIWNJqhN+bz1FIlQRURqQDIaJ2FokEIHAJ/k0XIYI6VM5UgVBRupS4YkMXtvdBAYnfsDpFx8C7N4Xw==
-
 "@react-spring/animated@~9.4.0":
   version "9.4.1"
   resolved "https://registry.yarnpkg.com/@react-spring/animated/-/animated-9.4.1.tgz#6b5e57725408ba8347f098a5111a9fb4de74a81b"
