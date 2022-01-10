@@ -11,7 +11,7 @@ import {
 import { ResizeObserver } from '@juggle/resize-observer'
 import { useIslandStore } from '../src/store'
 import shallow from 'zustand/shallow'
-import { geometries, islands } from '../src/state'
+import { islands } from '../src/state'
 
 function Diamond({ position, rotation }) {
   const a11y = useA11y()
@@ -38,7 +38,7 @@ function Nav({ left }) {
       role='button'
       actionCall={() => {
         snap.setRotation(
-          snap.rotation + ((Math.PI * 2) / geometries?.length) * (left ? -1 : 1)
+          snap.rotation + ((Math.PI * 2) / islands?.length) * (left ? -1 : 1)
         )
         snap.setActive(
           left
