@@ -38,10 +38,10 @@ function Nav({ left }) {
       role='button'
       actionCall={() => {
         snap.setRotation(
-          snap.rotation + ((Math.PI * 2) / islands?.length) * (left ? -1 : 1)
+          snap.rotation + ((Math.PI * 2) / islands?.length) * (!left ? -1 : 1)
         )
         snap.setActive(
-          left
+          !left
             ? snap.active === 0
               ? 4
               : snap.active - 1
@@ -69,7 +69,7 @@ function Shape({ index, active, item, ...props }) {
   const a11y = useA11y()
 
   useFrame((state, delta) => {
-    const s = active ? 1 : 0.75
+    const s = active ? 1.25 : 0.75
     ref.current.scale.lerp(vec.set(s, s, s), 0.1)
     ref.current.position.y = active ? Math.sin(state.clock.elapsedTime) / 2 : 0
     ref.current.rotation.y += active ? 0.005 : 0
@@ -78,7 +78,7 @@ function Shape({ index, active, item, ...props }) {
   return (
     <>
       <group rotation-y={index * 2000} ref={ref} {...props}>
-        <group position={[0, 0, 0]}>{item?.gltfjsx()}</group>
+        <group position={[0, 0, 0]}>{item?.gltfjsx(item?.billboards)}</group>
       </group>
     </>
   )
