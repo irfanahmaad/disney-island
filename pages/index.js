@@ -69,7 +69,7 @@ function Shape({ index, active, item, ...props }) {
   const a11y = useA11y()
 
   useFrame((state, delta) => {
-    const s = active ? 1.25 : 0.75
+    const s = active ? 0.85 : 0.75
     ref.current.scale.lerp(vec.set(s, s, s), 0.1)
     ref.current.position.y = active ? Math.sin(state.clock.elapsedTime) / 2 : 0
     ref.current.rotation.y += active ? 0.005 : 0
@@ -95,7 +95,7 @@ function Carroussel() {
   )
 
   const group = useRef()
-  const radius = Math.min(6, viewport.width / 5)
+  const radius = Math.min(6, viewport.width / 2)
 
   useFrame(
     () =>
