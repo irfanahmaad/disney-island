@@ -78,7 +78,9 @@ function Shape({ index, active, item, ...props }) {
   return (
     <>
       <group rotation-y={index * 2000} ref={ref} {...props}>
-        <group position={[0, 0, 0]}>{item?.gltfjsx(item?.billboards)}</group>
+        <group position={[0, 0, 0]}>
+          {item?.gltfjsx(item?.billboards, item?.active)}
+        </group>
       </group>
     </>
   )
