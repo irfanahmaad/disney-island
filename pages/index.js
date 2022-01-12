@@ -154,13 +154,14 @@ export default function Home() {
         pixelRatio={[1, 1.5]}
       >
         <ContextBridge>
-          <pointLight position={[100, 100, 100]} intensity={0.5} />
+          <pointLight position={[100, 100, 100]} intensity={0.5} castShadow />
           <pointLight
             position={[-100, -100, -100]}
             intensity={1.5}
-            color={'#ccffcc'}
+            color={'#07113e'}
+            castShadow
           />
-          <ambientLight intensity={0.8} />
+          <ambientLight intensity={0.3} />
           <group>
             <A11ySection>
               <Nav left />

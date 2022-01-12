@@ -17,10 +17,10 @@ export default function SampleIsland({
   const texture = useLoader(TextureLoader, billboards)
 
   const sideBillboards = [
-    nodes.billboard_besar006.material,
-    nodes.billboard_besar006.material,
-    nodes.billboard_besar006.material,
-    nodes.billboard_besar006.material,
+    nodes.billboard_besar006?.material,
+    nodes.billboard_besar006?.material,
+    nodes.billboard_besar006?.material,
+    nodes.billboard_besar006?.material,
   ]
 
   const billboardsAppearance = useCallback(
@@ -30,9 +30,12 @@ export default function SampleIsland({
             new MeshBasicMaterial({ map: texture[params] }),
             new MeshBasicMaterial({ map: texture[params] }),
           ]
-        : [nodes.billboard_besar006.material, nodes.billboard_besar006.material]
+        : [
+            nodes.billboard_besar006?.material,
+            nodes.billboard_besar006?.material,
+          ]
     },
-    [texture, nodes.billboard_besar006.material]
+    [texture, nodes.billboard_besar006?.material]
   )
 
   return (
@@ -46,7 +49,7 @@ export default function SampleIsland({
       >
         <mesh
           name='billboard_besar006'
-          geometry={nodes.billboard_besar006.geometry}
+          geometry={nodes.billboard_besar006?.geometry}
           position={[-1.25, 4.48, 0.15]}
           scale={[0.23, 0.34, 0.02]}
           material={[...sideBillboards, ...billboardsAppearance(0)]}
@@ -55,7 +58,7 @@ export default function SampleIsland({
         </mesh>
         <mesh
           name='billboard_besar007'
-          geometry={nodes.billboard_besar007.geometry}
+          geometry={nodes.billboard_besar007?.geometry}
           position={[-0.36, 3.74, 2.27]}
           scale={[0.23, 0.34, 0.02]}
           material={[...sideBillboards, ...billboardsAppearance(1)]}
@@ -64,7 +67,7 @@ export default function SampleIsland({
         </mesh>
         <mesh
           name='billboard_besar008'
-          geometry={nodes.billboard_besar008.geometry}
+          geometry={nodes.billboard_besar008?.geometry}
           position={[1, 3.74, 2.27]}
           scale={[0.23, 0.34, 0.02]}
           material={[...sideBillboards, ...billboardsAppearance(2)]}
@@ -73,7 +76,7 @@ export default function SampleIsland({
         </mesh>
         <mesh
           name='billboard_besar009'
-          geometry={nodes.billboard_besar009.geometry}
+          geometry={nodes.billboard_besar009?.geometry}
           position={[2.17, 3.74, -0.03]}
           rotation={[0, Math.PI / 2, 0]}
           scale={[0.23, 0.34, 0.02]}
@@ -83,7 +86,7 @@ export default function SampleIsland({
         </mesh>
         <mesh
           name='billboard_besar010'
-          geometry={nodes.billboard_besar010.geometry}
+          geometry={nodes.billboard_besar010?.geometry}
           position={[0.87, 3.74, 0.4]}
           rotation={[0, Math.PI / 2, 0]}
           scale={[0.23, 0.34, 0.02]}
@@ -93,7 +96,7 @@ export default function SampleIsland({
         </mesh>
         <mesh
           name='billboard_besar011'
-          geometry={nodes.billboard_besar011.geometry}
+          geometry={nodes.billboard_besar011?.geometry}
           position={[0.2, 4.55, -1.17]}
           rotation={[0, Math.PI / 2, 0]}
           scale={[0.23, 0.34, 0.02]}
@@ -102,23 +105,23 @@ export default function SampleIsland({
           <boxGeometry args={[2, 2, 2]} />
         </mesh>
         <mesh
-          geometry={nodes.building_1002.geometry}
-          material={nodes.building_1002.material}
+          geometry={nodes.building_1002?.geometry}
+          material={nodes.building_1002?.material}
           position={[0.05, 3.43, 0.05]}
           userData={{ name: 'building 1.002' }}
         >
           <mesh
             name='Cube100'
-            geometry={nodes.Cube100.geometry}
-            material={nodes.Cube100.material}
+            geometry={nodes.Cube100?.geometry}
+            material={nodes.Cube100?.material}
             position={[0, -0.06, 0]}
             scale={1.22}
             userData={{ name: 'Cube.100' }}
           />
           <mesh
             name='Cube101'
-            geometry={nodes.Cube101.geometry}
-            material={nodes.Cube101.material}
+            geometry={nodes.Cube101?.geometry}
+            material={nodes.Cube101?.material}
             position={[0, 1.9, 0]}
             userData={{ name: 'Cube.101' }}
           />
@@ -128,54 +131,54 @@ export default function SampleIsland({
             userData={{ name: 'Cube.102' }}
           >
             <mesh
-              geometry={nodes.Cube278.geometry}
-              material={nodes.Cube278.material}
+              geometry={nodes.Cube278?.geometry}
+              material={nodes.Cube278?.material}
             />
             <mesh
-              geometry={nodes.Cube278_1.geometry}
-              material={nodes.Cube278_1.material}
+              geometry={nodes.Cube278_1?.geometry}
+              material={nodes.Cube278_1?.material}
             />
           </group>
           <mesh
             name='Cube103'
-            geometry={nodes.Cube103.geometry}
-            material={nodes.Cube103.material}
+            geometry={nodes.Cube103?.geometry}
+            material={nodes.Cube103?.material}
             position={[0.08, 1.64, 0]}
             userData={{ name: 'Cube.103' }}
           />
           <mesh
             name='Cube104'
-            geometry={nodes.Cube104.geometry}
-            material={nodes.Cube104.material}
+            geometry={nodes.Cube104?.geometry}
+            material={nodes.Cube104?.material}
             position={[0.49, 1.59, -0.13]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.104' }}
           />
           <mesh
             name='Cube105'
-            geometry={nodes.Cube105.geometry}
-            material={nodes.Cube105.material}
+            geometry={nodes.Cube105?.geometry}
+            material={nodes.Cube105?.material}
             position={[0.18, 1.6, 0.49]}
             userData={{ name: 'Cube.105' }}
           />
           <mesh
             name='Cube106'
-            geometry={nodes.Cube106.geometry}
-            material={nodes.Cube106.material}
+            geometry={nodes.Cube106?.geometry}
+            material={nodes.Cube106?.material}
             position={[-0.35, 0.78, 0.49]}
             userData={{ name: 'Cube.106' }}
           />
           <mesh
             name='Cube107'
-            geometry={nodes.Cube107.geometry}
-            material={nodes.Cube107.material}
+            geometry={nodes.Cube107?.geometry}
+            material={nodes.Cube107?.material}
             position={[-0.14, 0.78, 0.49]}
             userData={{ name: 'Cube.107' }}
           />
           <mesh
             name='Cube108'
-            geometry={nodes.Cube108.geometry}
-            material={nodes.Cube108.material}
+            geometry={nodes.Cube108?.geometry}
+            material={nodes.Cube108?.material}
             position={[-0.1, 0.89, 0.49]}
             userData={{ name: 'Cube.108' }}
           />
@@ -186,18 +189,18 @@ export default function SampleIsland({
             userData={{ name: 'Cube.109' }}
           >
             <mesh
-              geometry={nodes.Cube285.geometry}
-              material={nodes.Cube285.material}
+              geometry={nodes.Cube285?.geometry}
+              material={nodes.Cube285?.material}
             />
             <mesh
-              geometry={nodes.Cube285_1.geometry}
-              material={nodes.Cube285_1.material}
+              geometry={nodes.Cube285_1?.geometry}
+              material={nodes.Cube285_1?.material}
             />
           </group>
           <mesh
             name='Cube110'
-            geometry={nodes.Cube110.geometry}
-            material={nodes.Cube110.material}
+            geometry={nodes.Cube110?.geometry}
+            material={nodes.Cube110?.material}
             position={[0.11, 1.48, 0.49]}
             userData={{ name: 'Cube.110' }}
           />
@@ -208,12 +211,12 @@ export default function SampleIsland({
             userData={{ name: 'Cube.111' }}
           >
             <mesh
-              geometry={nodes.Cube287.geometry}
-              material={nodes.Cube287.material}
+              geometry={nodes.Cube287?.geometry}
+              material={nodes.Cube287?.material}
             />
             <mesh
-              geometry={nodes.Cube287_1.geometry}
-              material={nodes.Cube287_1.material}
+              geometry={nodes.Cube287_1?.geometry}
+              material={nodes.Cube287_1?.material}
             />
           </group>
           <group
@@ -222,122 +225,122 @@ export default function SampleIsland({
             userData={{ name: 'Cube.112' }}
           >
             <mesh
-              geometry={nodes.Cube288.geometry}
-              material={nodes.Cube288.material}
+              geometry={nodes.Cube288?.geometry}
+              material={nodes.Cube288?.material}
             />
             <mesh
-              geometry={nodes.Cube288_1.geometry}
-              material={nodes.Cube288_1.material}
+              geometry={nodes.Cube288_1?.geometry}
+              material={nodes.Cube288_1?.material}
             />
           </group>
           <mesh
             name='Cube113'
-            geometry={nodes.Cube113.geometry}
-            material={nodes.Cube113.material}
+            geometry={nodes.Cube113?.geometry}
+            material={nodes.Cube113?.material}
             position={[0.32, 1.48, 0.49]}
             userData={{ name: 'Cube.113' }}
           />
           <mesh
             name='Cube114'
-            geometry={nodes.Cube114.geometry}
-            material={nodes.Cube114.material}
+            geometry={nodes.Cube114?.geometry}
+            material={nodes.Cube114?.material}
             position={[0.49, 1.59, 0.15]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.114' }}
           />
           <mesh
             name='Cube115'
-            geometry={nodes.Cube115.geometry}
-            material={nodes.Cube115.material}
+            geometry={nodes.Cube115?.geometry}
+            material={nodes.Cube115?.material}
             position={[0.49, 1.48, 0.07]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.115' }}
           />
           <mesh
             name='Cube116'
-            geometry={nodes.Cube116.geometry}
-            material={nodes.Cube116.material}
+            geometry={nodes.Cube116?.geometry}
+            material={nodes.Cube116?.material}
             position={[0.49, 1.22, 0.23]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.116' }}
           />
           <mesh
             name='Cube117'
-            geometry={nodes.Cube117.geometry}
-            material={nodes.Cube117.material}
+            geometry={nodes.Cube117?.geometry}
+            material={nodes.Cube117?.material}
             position={[0.49, 1.11, 0.31]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.117' }}
           />
           <mesh
             name='Cube118'
-            geometry={nodes.Cube118.geometry}
-            material={nodes.Cube118.material}
+            geometry={nodes.Cube118?.geometry}
+            material={nodes.Cube118?.material}
             position={[0.49, 0.85, 0.02]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.118' }}
           />
           <mesh
             name='Cube119'
-            geometry={nodes.Cube119.geometry}
-            material={nodes.Cube119.material}
+            geometry={nodes.Cube119?.geometry}
+            material={nodes.Cube119?.material}
             position={[0.49, 0.74, -0.11]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.119' }}
           />
           <mesh
             name='Cube120'
-            geometry={nodes.Cube120.geometry}
-            material={nodes.Cube120.material}
+            geometry={nodes.Cube120?.geometry}
+            material={nodes.Cube120?.material}
             position={[-0.3, 0.98, 0.49]}
             userData={{ name: 'Cube.120' }}
           />
           <mesh
             name='Cube121'
-            geometry={nodes.Cube121.geometry}
-            material={nodes.Cube121.material}
+            geometry={nodes.Cube121?.geometry}
+            material={nodes.Cube121?.material}
             position={[0.11, 0.12, 0.52]}
             userData={{ name: 'Cube.121' }}
           />
           <mesh
             name='Cube122'
-            geometry={nodes.Cube122.geometry}
-            material={nodes.Cube122.material}
+            geometry={nodes.Cube122?.geometry}
+            material={nodes.Cube122?.material}
             position={[0.31, 0.12, 0.52]}
             userData={{ name: 'Cube.122' }}
           />
           <mesh
             name='Cube123'
-            geometry={nodes.Cube123.geometry}
-            material={nodes.Cube123.material}
+            geometry={nodes.Cube123?.geometry}
+            material={nodes.Cube123?.material}
             userData={{ name: 'Cube.123' }}
           />
         </mesh>
         <mesh
-          geometry={nodes.building_2002.geometry}
-          material={nodes.building_2002.material}
+          geometry={nodes.building_2002?.geometry}
+          material={nodes.building_2002?.material}
           position={[-1.29, 3.43, 0.05]}
           userData={{ name: 'building 2.002' }}
         >
           <mesh
             name='Cube124'
-            geometry={nodes.Cube124.geometry}
-            material={nodes.Cube124.material}
+            geometry={nodes.Cube124?.geometry}
+            material={nodes.Cube124?.material}
             position={[0, -0.06, 0]}
             scale={1.22}
             userData={{ name: 'Cube.124' }}
           />
           <mesh
             name='Cube125'
-            geometry={nodes.Cube125.geometry}
-            material={nodes.Cube125.material}
+            geometry={nodes.Cube125?.geometry}
+            material={nodes.Cube125?.material}
             position={[0, 0.55, 0]}
             userData={{ name: 'Cube.125' }}
           />
           <mesh
             name='Cube126'
-            geometry={nodes.Cube126.geometry}
-            material={nodes.Cube126.material}
+            geometry={nodes.Cube126?.geometry}
+            material={nodes.Cube126?.material}
             position={[0.61, 0.52, -0.04]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.126' }}
@@ -348,38 +351,38 @@ export default function SampleIsland({
             userData={{ name: 'Cube.127' }}
           >
             <mesh
-              geometry={nodes.Cube304.geometry}
-              material={nodes.Cube304.material}
+              geometry={nodes.Cube304?.geometry}
+              material={nodes.Cube304?.material}
             />
             <mesh
-              geometry={nodes.Cube304_1.geometry}
-              material={nodes.Cube304_1.material}
+              geometry={nodes.Cube304_1?.geometry}
+              material={nodes.Cube304_1?.material}
             />
           </group>
           <mesh
             name='Cube128'
-            geometry={nodes.Cube128.geometry}
-            material={nodes.Cube128.material}
+            geometry={nodes.Cube128?.geometry}
+            material={nodes.Cube128?.material}
             position={[0.11, 0.12, 0.52]}
             userData={{ name: 'Cube.128' }}
           />
           <mesh
             name='Cube129'
-            geometry={nodes.Cube129.geometry}
-            material={nodes.Cube129.material}
+            geometry={nodes.Cube129?.geometry}
+            material={nodes.Cube129?.material}
             position={[0.31, 0.12, 0.52]}
             userData={{ name: 'Cube.129' }}
           />
           <mesh
             name='Cube130'
-            geometry={nodes.Cube130.geometry}
-            material={nodes.Cube130.material}
+            geometry={nodes.Cube130?.geometry}
+            material={nodes.Cube130?.material}
             userData={{ name: 'Cube.130' }}
           />
           <mesh
             name='Cube131'
-            geometry={nodes.Cube131.geometry}
-            material={nodes.Cube131.material}
+            geometry={nodes.Cube131?.geometry}
+            material={nodes.Cube131?.material}
             position={[0, 0.54, 0.63]}
             rotation={[Math.PI / 2, 0, 0]}
             scale={0.67}
@@ -393,32 +396,32 @@ export default function SampleIsland({
             userData={{ name: 'Cylinder.003' }}
           >
             <mesh
-              geometry={nodes.Cylinder007.geometry}
-              material={nodes.Cylinder007.material}
+              geometry={nodes.Cylinder007?.geometry}
+              material={nodes.Cylinder007?.material}
             />
             <mesh
-              geometry={nodes.Cylinder007_1.geometry}
-              material={nodes.Cylinder007_1.material}
+              geometry={nodes.Cylinder007_1?.geometry}
+              material={nodes.Cylinder007_1?.material}
             />
           </group>
         </mesh>
         <mesh
-          geometry={nodes.building_3002.geometry}
-          material={nodes.building_3002.material}
+          geometry={nodes.building_3002?.geometry}
+          material={nodes.building_3002?.material}
           position={[0.08, 3.43, -1.13]}
           rotation={[0, Math.PI / 2, 0]}
           userData={{ name: 'building 3.002' }}
         >
           <mesh
-            geometry={nodes.Cube132_2.geometry}
-            material={nodes.Cube132_2.material}
+            geometry={nodes.Cube132_2?.geometry}
+            material={nodes.Cube132_2?.material}
             position={[0, -0.06, 0]}
             scale={[1.22, 1.22, 1.22]}
             userData={{ name: 'Cube.132' }}
           />
           <mesh
-            geometry={nodes.Cube133_1.geometry}
-            material={nodes.Cube133_1.material}
+            geometry={nodes.Cube133_1?.geometry}
+            material={nodes.Cube133_1?.material}
             position={[0, 0.7, 0]}
             userData={{ name: 'Cube.133' }}
           />
@@ -428,22 +431,22 @@ export default function SampleIsland({
             userData={{ name: 'Cube.134' }}
           >
             <mesh
-              geometry={nodes.Cube312.geometry}
-              material={nodes.Cube312.material}
+              geometry={nodes.Cube312?.geometry}
+              material={nodes.Cube312?.material}
             />
             <mesh
-              geometry={nodes.Cube312_1.geometry}
-              material={nodes.Cube312_1.material}
+              geometry={nodes.Cube312_1?.geometry}
+              material={nodes.Cube312_1?.material}
             />
           </group>
           <group position={[-0.23, 0.24, 0.51]} userData={{ name: 'Cube.135' }}>
             <mesh
-              geometry={nodes.Cube313.geometry}
-              material={nodes.Cube313.material}
+              geometry={nodes.Cube313?.geometry}
+              material={nodes.Cube313?.material}
             />
             <mesh
-              geometry={nodes.Cube313_1.geometry}
-              material={nodes.Cube313_1.material}
+              geometry={nodes.Cube313_1?.geometry}
+              material={nodes.Cube313_1?.material}
             />
           </group>
           <mesh
@@ -453,66 +456,66 @@ export default function SampleIsland({
             userData={{ name: 'Cube.136' }}
           />
           <mesh
-            geometry={nodes.Cube137_1.geometry}
-            material={nodes.Cube137_1.material}
+            geometry={nodes.Cube137_1?.geometry}
+            material={nodes.Cube137_1?.material}
             userData={{ name: 'Cube.137' }}
           />
           <mesh
-            geometry={nodes.Cube138_1.geometry}
-            material={nodes.Cube138_1.material}
+            geometry={nodes.Cube138_1?.geometry}
+            material={nodes.Cube138_1?.material}
             position={[0.1, 0.03, 0.59]}
             rotation={[Math.PI / 2, 0, 0]}
             userData={{ name: 'Cube.138' }}
           />
         </mesh>
         <mesh
-          geometry={nodes.road007.geometry}
-          material={nodes.road007.material}
+          geometry={nodes.road007?.geometry}
+          material={nodes.road007?.material}
           position={[1.2, 3.33, 1.31]}
           userData={{ name: 'road.007' }}
         >
           <mesh
-            geometry={nodes.Cube139_1.geometry}
-            material={nodes.Cube139_1.material}
+            geometry={nodes.Cube139_1?.geometry}
+            material={nodes.Cube139_1?.material}
             position={[0.27, -0.04, 0.15]}
             scale={0.82}
             userData={{ name: 'Cube.139' }}
           />
           <mesh
-            geometry={nodes.road014.geometry}
-            material={nodes.road014.material}
+            geometry={nodes.road014?.geometry}
+            material={nodes.road014?.material}
             position={[-0.66, 0, 0]}
             userData={{ name: 'road.014' }}
           />
           <mesh
-            geometry={nodes.road015.geometry}
-            material={nodes.road015.material}
+            geometry={nodes.road015?.geometry}
+            material={nodes.road015?.material}
             position={[-1.13, -0.04, 0.52]}
             userData={{ name: 'road.015' }}
           />
           <mesh
-            geometry={nodes.road016.geometry}
-            material={nodes.road016.material}
+            geometry={nodes.road016?.geometry}
+            material={nodes.road016?.material}
             position={[-1.13, -0.04, -0.25]}
             userData={{ name: 'road.016' }}
           />
           <mesh
-            geometry={nodes.road017.geometry}
-            material={nodes.road017.material}
+            geometry={nodes.road017?.geometry}
+            material={nodes.road017?.material}
             position={[-0.14, -0.04, -1.23]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'road.017' }}
           />
           <mesh
-            geometry={nodes.road018.geometry}
-            material={nodes.road018.material}
+            geometry={nodes.road018?.geometry}
+            material={nodes.road018?.material}
             position={[0.25, -0.08, -1.35]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'road.018' }}
           />
           <mesh
-            geometry={nodes.road019.geometry}
-            material={nodes.road019.material}
+            geometry={nodes.road019?.geometry}
+            material={nodes.road019?.material}
             position={[0.64, -0.04, -1.23]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'road.019' }}
@@ -525,12 +528,12 @@ export default function SampleIsland({
           userData={{ name: 'Sphere_2.010' }}
         >
           <mesh
-            geometry={nodes.Mesh215.geometry}
+            geometry={nodes.Mesh215?.geometry}
             material={materials['island 2 c 6']}
           />
           <mesh
-            geometry={nodes.Mesh215_1.geometry}
-            material={nodes.Mesh215_1.material}
+            geometry={nodes.Mesh215_1?.geometry}
+            material={nodes.Mesh215_1?.material}
           />
         </group>
       </group>
@@ -542,32 +545,32 @@ export default function SampleIsland({
       >
         <mesh
           name='billboard_besar019'
-          geometry={nodes.billboard_besar019.geometry}
-          material={nodes.billboard_besar019.material}
+          geometry={nodes.billboard_besar019?.geometry}
+          material={nodes.billboard_besar019?.material}
           position={[-1.25, 4.48, 0.15]}
           scale={[0.23, 0.34, 0.02]}
           userData={{ name: 'billboard besar.019' }}
         />
         <mesh
           name='billboard_besar020'
-          geometry={nodes.billboard_besar020.geometry}
-          material={nodes.billboard_besar020.material}
+          geometry={nodes.billboard_besar020?.geometry}
+          material={nodes.billboard_besar020?.material}
           position={[-0.36, 3.74, 2.27]}
           scale={[0.23, 0.34, 0.02]}
           userData={{ name: 'billboard besar.020' }}
         />
         <mesh
           name='billboard_besar021'
-          geometry={nodes.billboard_besar021.geometry}
-          material={nodes.billboard_besar021.material}
+          geometry={nodes.billboard_besar021?.geometry}
+          material={nodes.billboard_besar021?.material}
           position={[1, 3.74, 2.27]}
           scale={[0.23, 0.34, 0.02]}
           userData={{ name: 'billboard besar.021' }}
         />
         <mesh
           name='billboard_besar022'
-          geometry={nodes.billboard_besar022.geometry}
-          material={nodes.billboard_besar022.material}
+          geometry={nodes.billboard_besar022?.geometry}
+          material={nodes.billboard_besar022?.material}
           position={[2.17, 3.74, -0.03]}
           rotation={[0, Math.PI / 2, 0]}
           scale={[0.23, 0.34, 0.02]}
@@ -575,8 +578,8 @@ export default function SampleIsland({
         />
         <mesh
           name='billboard_besar023'
-          geometry={nodes.billboard_besar023.geometry}
-          material={nodes.billboard_besar023.material}
+          geometry={nodes.billboard_besar023?.geometry}
+          material={nodes.billboard_besar023?.material}
           position={[0.87, 3.74, 0.4]}
           rotation={[0, Math.PI / 2, 0]}
           scale={[0.23, 0.34, 0.02]}
@@ -584,31 +587,31 @@ export default function SampleIsland({
         />
         <mesh
           name='billboard_besar024'
-          geometry={nodes.billboard_besar024.geometry}
-          material={nodes.billboard_besar024.material}
+          geometry={nodes.billboard_besar024?.geometry}
+          material={nodes.billboard_besar024?.material}
           position={[0.2, 4.55, -1.17]}
           rotation={[0, Math.PI / 2, 0]}
           scale={[0.23, 0.34, 0.02]}
           userData={{ name: 'billboard besar.024' }}
         />
         <mesh
-          geometry={nodes.building_1004.geometry}
-          material={nodes.building_1004.material}
+          geometry={nodes.building_1004?.geometry}
+          material={nodes.building_1004?.material}
           position={[0.05, 3.43, 0.05]}
           userData={{ name: 'building 1.004' }}
         >
           <mesh
             name='Cube081'
-            geometry={nodes.Cube081.geometry}
-            material={nodes.Cube081.material}
+            geometry={nodes.Cube081?.geometry}
+            material={nodes.Cube081?.material}
             position={[0, -0.06, 0]}
             scale={1.22}
             userData={{ name: 'Cube.081' }}
           />
           <mesh
             name='Cube082'
-            geometry={nodes.Cube082.geometry}
-            material={nodes.Cube082.material}
+            geometry={nodes.Cube082?.geometry}
+            material={nodes.Cube082?.material}
             position={[0, 1.9, 0]}
             userData={{ name: 'Cube.082' }}
           />
@@ -618,54 +621,54 @@ export default function SampleIsland({
             userData={{ name: 'Cube.083' }}
           >
             <mesh
-              geometry={nodes.Cube125_1.geometry}
-              material={nodes.Cube125_1.material}
+              geometry={nodes.Cube125_1?.geometry}
+              material={nodes.Cube125_1?.material}
             />
             <mesh
-              geometry={nodes.Cube125_2.geometry}
-              material={nodes.Cube125_2.material}
+              geometry={nodes.Cube125_2?.geometry}
+              material={nodes.Cube125_2?.material}
             />
           </group>
           <mesh
             name='Cube084'
-            geometry={nodes.Cube084.geometry}
-            material={nodes.Cube084.material}
+            geometry={nodes.Cube084?.geometry}
+            material={nodes.Cube084?.material}
             position={[0.08, 1.64, 0]}
             userData={{ name: 'Cube.084' }}
           />
           <mesh
             name='Cube085'
-            geometry={nodes.Cube085.geometry}
-            material={nodes.Cube085.material}
+            geometry={nodes.Cube085?.geometry}
+            material={nodes.Cube085?.material}
             position={[0.49, 1.59, -0.13]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.085' }}
           />
           <mesh
             name='Cube086'
-            geometry={nodes.Cube086.geometry}
-            material={nodes.Cube086.material}
+            geometry={nodes.Cube086?.geometry}
+            material={nodes.Cube086?.material}
             position={[0.18, 1.6, 0.49]}
             userData={{ name: 'Cube.086' }}
           />
           <mesh
             name='Cube087'
-            geometry={nodes.Cube087.geometry}
-            material={nodes.Cube087.material}
+            geometry={nodes.Cube087?.geometry}
+            material={nodes.Cube087?.material}
             position={[-0.35, 0.78, 0.49]}
             userData={{ name: 'Cube.087' }}
           />
           <mesh
             name='Cube088'
-            geometry={nodes.Cube088.geometry}
-            material={nodes.Cube088.material}
+            geometry={nodes.Cube088?.geometry}
+            material={nodes.Cube088?.material}
             position={[-0.14, 0.78, 0.49]}
             userData={{ name: 'Cube.088' }}
           />
           <mesh
             name='Cube089'
-            geometry={nodes.Cube089.geometry}
-            material={nodes.Cube089.material}
+            geometry={nodes.Cube089?.geometry}
+            material={nodes.Cube089?.material}
             position={[-0.1, 0.89, 0.49]}
             userData={{ name: 'Cube.089' }}
           />
@@ -676,18 +679,18 @@ export default function SampleIsland({
             userData={{ name: 'Cube.090' }}
           >
             <mesh
-              geometry={nodes.Cube132.geometry}
-              material={nodes.Cube132.material}
+              geometry={nodes.Cube132?.geometry}
+              material={nodes.Cube132?.material}
             />
             <mesh
-              geometry={nodes.Cube132_1.geometry}
-              material={nodes.Cube132_1.material}
+              geometry={nodes.Cube132_1?.geometry}
+              material={nodes.Cube132_1?.material}
             />
           </group>
           <mesh
             name='Cube091'
-            geometry={nodes.Cube091.geometry}
-            material={nodes.Cube091.material}
+            geometry={nodes.Cube091?.geometry}
+            material={nodes.Cube091?.material}
             position={[0.11, 1.48, 0.49]}
             userData={{ name: 'Cube.091' }}
           />
@@ -698,12 +701,12 @@ export default function SampleIsland({
             userData={{ name: 'Cube.092' }}
           >
             <mesh
-              geometry={nodes.Cube134.geometry}
-              material={nodes.Cube134.material}
+              geometry={nodes.Cube134?.geometry}
+              material={nodes.Cube134?.material}
             />
             <mesh
-              geometry={nodes.Cube134_1.geometry}
-              material={nodes.Cube134_1.material}
+              geometry={nodes.Cube134_1?.geometry}
+              material={nodes.Cube134_1?.material}
             />
           </group>
           <group
@@ -712,122 +715,122 @@ export default function SampleIsland({
             userData={{ name: 'Cube.093' }}
           >
             <mesh
-              geometry={nodes.Cube135.geometry}
-              material={nodes.Cube135.material}
+              geometry={nodes.Cube135?.geometry}
+              material={nodes.Cube135?.material}
             />
             <mesh
-              geometry={nodes.Cube135_1.geometry}
-              material={nodes.Cube135_1.material}
+              geometry={nodes.Cube135_1?.geometry}
+              material={nodes.Cube135_1?.material}
             />
           </group>
           <mesh
             name='Cube094'
-            geometry={nodes.Cube094.geometry}
-            material={nodes.Cube094.material}
+            geometry={nodes.Cube094?.geometry}
+            material={nodes.Cube094?.material}
             position={[0.32, 1.48, 0.49]}
             userData={{ name: 'Cube.094' }}
           />
           <mesh
             name='Cube095'
-            geometry={nodes.Cube095.geometry}
-            material={nodes.Cube095.material}
+            geometry={nodes.Cube095?.geometry}
+            material={nodes.Cube095?.material}
             position={[0.49, 1.59, 0.15]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.095' }}
           />
           <mesh
             name='Cube096'
-            geometry={nodes.Cube096.geometry}
-            material={nodes.Cube096.material}
+            geometry={nodes.Cube096?.geometry}
+            material={nodes.Cube096?.material}
             position={[0.49, 1.48, 0.07]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.096' }}
           />
           <mesh
             name='Cube097'
-            geometry={nodes.Cube097.geometry}
-            material={nodes.Cube097.material}
+            geometry={nodes.Cube097?.geometry}
+            material={nodes.Cube097?.material}
             position={[0.49, 1.22, 0.23]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.097' }}
           />
           <mesh
             name='Cube098'
-            geometry={nodes.Cube098.geometry}
-            material={nodes.Cube098.material}
+            geometry={nodes.Cube098?.geometry}
+            material={nodes.Cube098?.material}
             position={[0.49, 1.11, 0.31]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.098' }}
           />
           <mesh
             name='Cube099'
-            geometry={nodes.Cube099.geometry}
-            material={nodes.Cube099.material}
+            geometry={nodes.Cube099?.geometry}
+            material={nodes.Cube099?.material}
             position={[0.49, 0.85, 0.02]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.099' }}
           />
           <mesh
             name='Cube140'
-            geometry={nodes.Cube140.geometry}
-            material={nodes.Cube140.material}
+            geometry={nodes.Cube140?.geometry}
+            material={nodes.Cube140?.material}
             position={[0.49, 0.74, -0.11]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.140' }}
           />
           <mesh
             name='Cube141'
-            geometry={nodes.Cube141.geometry}
-            material={nodes.Cube141.material}
+            geometry={nodes.Cube141?.geometry}
+            material={nodes.Cube141?.material}
             position={[-0.3, 0.98, 0.49]}
             userData={{ name: 'Cube.141' }}
           />
           <mesh
             name='Cube142'
-            geometry={nodes.Cube142.geometry}
-            material={nodes.Cube142.material}
+            geometry={nodes.Cube142?.geometry}
+            material={nodes.Cube142?.material}
             position={[0.11, 0.12, 0.52]}
             userData={{ name: 'Cube.142' }}
           />
           <mesh
             name='Cube143'
-            geometry={nodes.Cube143.geometry}
-            material={nodes.Cube143.material}
+            geometry={nodes.Cube143?.geometry}
+            material={nodes.Cube143?.material}
             position={[0.31, 0.12, 0.52]}
             userData={{ name: 'Cube.143' }}
           />
           <mesh
             name='Cube144'
-            geometry={nodes.Cube144.geometry}
-            material={nodes.Cube144.material}
+            geometry={nodes.Cube144?.geometry}
+            material={nodes.Cube144?.material}
             userData={{ name: 'Cube.144' }}
           />
         </mesh>
         <mesh
-          geometry={nodes.building_2004.geometry}
-          material={nodes.building_2004.material}
+          geometry={nodes.building_2004?.geometry}
+          material={nodes.building_2004?.material}
           position={[-1.29, 3.43, 0.05]}
           userData={{ name: 'building 2.004' }}
         >
           <mesh
             name='Cube145'
-            geometry={nodes.Cube145.geometry}
-            material={nodes.Cube145.material}
+            geometry={nodes.Cube145?.geometry}
+            material={nodes.Cube145?.material}
             position={[0, -0.06, 0]}
             scale={1.22}
             userData={{ name: 'Cube.145' }}
           />
           <mesh
             name='Cube146'
-            geometry={nodes.Cube146.geometry}
-            material={nodes.Cube146.material}
+            geometry={nodes.Cube146?.geometry}
+            material={nodes.Cube146?.material}
             position={[0, 0.55, 0]}
             userData={{ name: 'Cube.146' }}
           />
           <mesh
             name='Cube147'
-            geometry={nodes.Cube147.geometry}
-            material={nodes.Cube147.material}
+            geometry={nodes.Cube147?.geometry}
+            material={nodes.Cube147?.material}
             position={[0.61, 0.52, -0.04]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'Cube.147' }}
@@ -838,38 +841,38 @@ export default function SampleIsland({
             userData={{ name: 'Cube.148' }}
           >
             <mesh
-              geometry={nodes.Cube150_1.geometry}
-              material={nodes.Cube150_1.material}
+              geometry={nodes.Cube150_1?.geometry}
+              material={nodes.Cube150_1?.material}
             />
             <mesh
-              geometry={nodes.Cube150_2.geometry}
-              material={nodes.Cube150_2.material}
+              geometry={nodes.Cube150_2?.geometry}
+              material={nodes.Cube150_2?.material}
             />
           </group>
           <mesh
             name='Cube149'
-            geometry={nodes.Cube149.geometry}
-            material={nodes.Cube149.material}
+            geometry={nodes.Cube149?.geometry}
+            material={nodes.Cube149?.material}
             position={[0.11, 0.12, 0.52]}
             userData={{ name: 'Cube.149' }}
           />
           <mesh
             name='Cube150'
-            geometry={nodes.Cube150.geometry}
-            material={nodes.Cube150.material}
+            geometry={nodes.Cube150?.geometry}
+            material={nodes.Cube150?.material}
             position={[0.31, 0.12, 0.52]}
             userData={{ name: 'Cube.150' }}
           />
           <mesh
             name='Cube151'
-            geometry={nodes.Cube151.geometry}
-            material={nodes.Cube151.material}
+            geometry={nodes.Cube151?.geometry}
+            material={nodes.Cube151?.material}
             userData={{ name: 'Cube.151' }}
           />
           <mesh
             name='Cube152'
-            geometry={nodes.Cube152.geometry}
-            material={nodes.Cube152.material}
+            geometry={nodes.Cube152?.geometry}
+            material={nodes.Cube152?.material}
             position={[0, 0.54, 0.63]}
             rotation={[Math.PI / 2, 0, 0]}
             scale={0.67}
@@ -883,25 +886,25 @@ export default function SampleIsland({
             userData={{ name: 'Cylinder.004' }}
           >
             <mesh
-              geometry={nodes.Cylinder003_1.geometry}
-              material={nodes.Cylinder003_1.material}
+              geometry={nodes.Cylinder003_1?.geometry}
+              material={nodes.Cylinder003_1?.material}
             />
             <mesh
-              geometry={nodes.Cylinder003_2.geometry}
-              material={nodes.Cylinder003_2.material}
+              geometry={nodes.Cylinder003_2?.geometry}
+              material={nodes.Cylinder003_2?.material}
             />
           </group>
         </mesh>
         <mesh
-          geometry={nodes.building_3004.geometry}
-          material={nodes.building_3004.material}
+          geometry={nodes.building_3004?.geometry}
+          material={nodes.building_3004?.material}
           position={[0.08, 3.43, -1.13]}
           rotation={[0, Math.PI / 2, 0]}
           userData={{ name: 'building 3.004' }}
         >
           <mesh
-            geometry={nodes.Cube153_1.geometry}
-            material={nodes.Cube153_1.material}
+            geometry={nodes.Cube153_1?.geometry}
+            material={nodes.Cube153_1?.material}
             position={[0, -0.06, 0]}
             scale={[1.22, 1.22, 1.22]}
             userData={{ name: 'Cube.153' }}
@@ -918,91 +921,91 @@ export default function SampleIsland({
             userData={{ name: 'Cube.155' }}
           >
             <mesh
-              geometry={nodes.Cube157_1.geometry}
-              material={nodes.Cube157_1.material}
+              geometry={nodes.Cube157_1?.geometry}
+              material={nodes.Cube157_1?.material}
             />
             <mesh
-              geometry={nodes.Cube157_2.geometry}
-              material={nodes.Cube157_2.material}
+              geometry={nodes.Cube157_2?.geometry}
+              material={nodes.Cube157_2?.material}
             />
           </group>
           <group position={[-0.23, 0.24, 0.51]} userData={{ name: 'Cube.156' }}>
             <mesh
-              geometry={nodes.Cube158_1.geometry}
-              material={nodes.Cube158_1.material}
+              geometry={nodes.Cube158_1?.geometry}
+              material={nodes.Cube158_1?.material}
             />
             <mesh
-              geometry={nodes.Cube158_2.geometry}
-              material={nodes.Cube158_2.material}
+              geometry={nodes.Cube158_2?.geometry}
+              material={nodes.Cube158_2?.material}
             />
           </group>
           <mesh
-            geometry={nodes.Cube157.geometry}
-            material={nodes.Cube157.material}
+            geometry={nodes.Cube157?.geometry}
+            material={nodes.Cube157?.material}
             position={[0.1, 0.11, 0.54]}
             userData={{ name: 'Cube.157' }}
           />
           <mesh
-            geometry={nodes.Cube158.geometry}
-            material={nodes.Cube158.material}
+            geometry={nodes.Cube158?.geometry}
+            material={nodes.Cube158?.material}
             userData={{ name: 'Cube.158' }}
           />
           <mesh
-            geometry={nodes.Cube159.geometry}
-            material={nodes.Cube159.material}
+            geometry={nodes.Cube159?.geometry}
+            material={nodes.Cube159?.material}
             position={[0.1, 0.03, 0.59]}
             rotation={[Math.PI / 2, 0, 0]}
             userData={{ name: 'Cube.159' }}
           />
         </mesh>
         <mesh
-          geometry={nodes.road022.geometry}
-          material={nodes.road022.material}
+          geometry={nodes.road022?.geometry}
+          material={nodes.road022?.material}
           position={[1.2, 3.33, 1.31]}
           userData={{ name: 'road.022' }}
         >
           <mesh
-            geometry={nodes.Cube160.geometry}
-            material={nodes.Cube160.material}
+            geometry={nodes.Cube160?.geometry}
+            material={nodes.Cube160?.material}
             position={[0.27, -0.04, 0.15]}
             scale={0.82}
             userData={{ name: 'Cube.160' }}
           />
           <mesh
-            geometry={nodes.road023.geometry}
-            material={nodes.road023.material}
+            geometry={nodes.road023?.geometry}
+            material={nodes.road023?.material}
             position={[-0.66, 0, 0]}
             userData={{ name: 'road.023' }}
           />
           <mesh
-            geometry={nodes.road024.geometry}
-            material={nodes.road024.material}
+            geometry={nodes.road024?.geometry}
+            material={nodes.road024?.material}
             position={[-1.13, -0.04, 0.52]}
             userData={{ name: 'road.024' }}
           />
           <mesh
-            geometry={nodes.road025.geometry}
-            material={nodes.road025.material}
+            geometry={nodes.road025?.geometry}
+            material={nodes.road025?.material}
             position={[-1.13, -0.04, -0.25]}
             userData={{ name: 'road.025' }}
           />
           <mesh
-            geometry={nodes.road026.geometry}
-            material={nodes.road026.material}
+            geometry={nodes.road026?.geometry}
+            material={nodes.road026?.material}
             position={[-0.14, -0.04, -1.23]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'road.026' }}
           />
           <mesh
-            geometry={nodes.road027.geometry}
-            material={nodes.road027.material}
+            geometry={nodes.road027?.geometry}
+            material={nodes.road027?.material}
             position={[0.25, -0.08, -1.35]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'road.027' }}
           />
           <mesh
-            geometry={nodes.road028.geometry}
-            material={nodes.road028.material}
+            geometry={nodes.road028?.geometry}
+            material={nodes.road028?.material}
             position={[0.64, -0.04, -1.23]}
             rotation={[0, Math.PI / 2, 0]}
             userData={{ name: 'road.028' }}
@@ -1015,12 +1018,12 @@ export default function SampleIsland({
           userData={{ name: 'Sphere_2.003' }}
         >
           <mesh
-            geometry={nodes.Mesh003.geometry}
+            geometry={nodes.Mesh003?.geometry}
             material={materials['island 2 c 6.001']}
           />
           <mesh
-            geometry={nodes.Mesh003_1.geometry}
-            material={nodes.Mesh003_1.material}
+            geometry={nodes.Mesh003_1?.geometry}
+            material={nodes.Mesh003_1?.material}
           />
         </group>
       </group>
